@@ -1,0 +1,32 @@
+<div class="header">
+    <h3>{{title}}</h3>
+</div>
+
+<div class="row">
+    <div class="col">
+        <form (change)="readExcel($event)">
+            <div>
+                <input type="file">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let poke of pokemons">
+                    <td>{{poke.Nombre}}</td>
+                    <td>{{poke.Link}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
